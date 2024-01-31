@@ -1,0 +1,7 @@
+sqlalchemy==1.4.36
+pandas~=2.1.4
+python-dotenv==0.18.0
+Flask~=3.0.1
+python-dateutil==2.8.2
+python-dotenv==1.0.0
+numpy==1.25.1

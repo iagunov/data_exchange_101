@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Exchange 101 Project</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+        color: #1e3a8a;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #ffffff;
+            width: 100%;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        nav form {
+            display: flex;
+            align-items: baseline;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1e3a8a;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"] + label {
+            background-color: #F2F2F2;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        input[type="radio"]:checked + label {
+            background-color: #172b4d;
+            color: #ffffff;
+        }
+
+        input[type="submit"] {
+            background-color: #172b4d;
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1e3a8a;
+        }
+
+        .container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .message {
+            background-color: #F2F2F2;
+            color: grey;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #F2F2F2;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Neoflex student ETL</h1>
+            <form method="POST" action="/run_script">
+                <input type="radio" id="mode1" name="mode" value="1" checked>
+                <label for="mode1">Load data to file</label>
+                <input type="radio" id="mode2" name="mode" value="2">
+                <label for="mode2">Load data to PostgreSQL</label>
+                <input type="submit" value="Run Script">
+            </form>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="message-container">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="message">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

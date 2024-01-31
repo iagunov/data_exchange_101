@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>web_main API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>web_main</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import sys
+import time
+from pathlib import Path
+from typing import Optional
+from os import getenv
+from dotenv import load_dotenv, find_dotenv
+from flask import Flask, render_template, request
+from sqlalchemy import create_engine, text
+import pandas as pd
+from sqlalchemy.engine import Engine, Connection
+
+app = Flask(__name__, template_folder=&#39;templates&#39;)
+
+messages = []
+
+
+def connect_to_postgresql() -&gt; Engine:
+    &#34;&#34;&#34;
+    Проверка подключения к PostgreSQL.
+
+    :return: SQLAlchemy Engine объект для подключения к PostgreSQL.
+    &#34;&#34;&#34;
+    try:
+        # Для использования переменных окружения
+        load_dotenv(find_dotenv())
+
+        # Переменные окружения
+        DB_NAME = getenv(&#34;DB_NAME&#34;)
+        DB_HOST = getenv(&#34;DB_HOST&#34;)
+        DB_PORT = getenv(&#34;DB_PORT&#34;)
+        DB_USER = getenv(&#34;DB_USER&#34;)
+        DB_PASSWORD = getenv(&#34;DB_PASSWORD&#34;)
+
+        # Создание подключения к PostgreSQL
+        engine = create_engine(f&#39;postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}&#39;)
+
+        # Подключение к PostgreSQL
+        engine.connect()
+
+        print(&#39;\n Подключение к PostgreSQL успешно \n&#39;)
+        messages.append(&#39;\n Подключение к PostgreSQL успешно \n&#39;)
+        return engine
+
+    except Exception as e:
+        print(f&#39;\n Ошибка подключения к PostgreSQL: \n {e} \n&#39;)
+        messages.append(f&#39;\n Ошибка подключения к PostgreSQL: \n {e} \n&#39;)
+
+
+@app.route(&#39;/&#39;)
+def index():
+    return render_template(&#39;index.html&#39;)
+
+
+def create_table_logging(engine: Engine) -&gt; None:
+    &#34;&#34;&#34;
+    Создание таблиц логов.
+
+    :param engine: SQLAlchemy Engine объект
+    :return: None
+    &#34;&#34;&#34;
+    with engine.connect() as connect:
+        with connect.begin():
+            connect.execute(text(&#34;&#34;&#34;
+                CREATE TABLE IF NOT EXISTS logs.extract_load_logs (
+                    action_date TIMESTAMP NOT NULL DEFAULT NOW(),
+                    status VARCHAR(40),
+                    description TEXT,
+                    error TEXT
+                );
+            &#34;&#34;&#34;))
+
+
+def logging(status: str, engine: Engine, description: str = &#39;&#39;, error: str = &#39;&#39;) -&gt; None:
+    &#34;&#34;&#34;
+    Загрузка данных в таблицу логов.
+
+    :param status: Статус загрузки данных (строка).
+    :param engine: Объект SQLAlchemy Engine.
+    :param description: Описание (по умолчанию пустая строка).
+    :param error: Ошибка (по умолчанию пустая строка).
+    :return: None
+    &#34;&#34;&#34;
+    with engine.connect() as connect:  # type: Connection
+        query = text(&#34;&#34;&#34;
+            INSERT INTO logs.extract_load_logs (status, description, error)
+            VALUES (:status, :description, :error)
+        &#34;&#34;&#34;)
+
+        connect.execute(query, status=status, description=description, error=error)
+
+
+def exist_table(engine: Engine, schema: str, table_name: str) -&gt; bool:
+    &#34;&#34;&#34;
+    Проверка существования витрины в PostgreSQL и данных в ней.
+
+    :param engine: Объект SQLAlchemy Engine.
+    :param schema: Схема витрины.
+    :param table_name: Имя витрины.
+    :return: True, если витрина существует и содержит данные, иначе False.
+    &#34;&#34;&#34;
+    with engine.connect() as connect:  # type: Connection
+        exist_table = connect.execute(text(f&#34;&#34;&#34;select exists(
+                                        select * 
+                                        from information_schema.tables
+                                        where table_schema = &#39;{schema}&#39; 
+                                        and table_name = &#39;{table_name}&#39;)&#34;&#34;&#34;)).first()[0]
+
+        if exist_table:
+            data_query = text(f&#34;&#34;&#34;SELECT * FROM {schema}.{table_name};&#34;&#34;&#34;)
+            data = connect.execute(data_query).scalar()
+
+            if data is not None:
+                return True
+            else:
+                logging(&#39;error_exist_table_function&#39;, engine, f&#39;Ошибка, в витрине {schema}.{table_name} отсутствуют данные&#39;, &#39;&#39;)
+                print(f&#39;Ошибка, в витрине {schema}.{table_name} отсутствуют данные.\n&#39;)
+                messages.append(f&#39;Ошибка, в витрине {schema}.{table_name} отсутствуют данные.\n&#39;)
+        else:
+            logging(&#39;error_exist_table_function&#39;, engine, f&#39;Ошибка, витрины {schema}.{table_name} не существует.&#39;)
+            print(f&#39;Ошибка, витрины {schema}.{table_name} не существует.&#39;)
+            messages.append(f&#39;Ошибка, витрины {schema}.{table_name} не существует.&#39;)
+
+        return False
+
+
+def extract_postgresql(engine: Engine, schema: str, table_name: str) -&gt; Optional[pd.DataFrame]:
+    &#34;&#34;&#34;
+    Извлечение данных из PostgreSQL.
+
+    :param engine: Объект SQLAlchemy Engine.
+    :param schema: Схема витрины.
+    :param table_name: Имя витрины.
+    :return: DataFrame с извлеченными данными или None, если произошла ошибка.
+    &#34;&#34;&#34;
+    try:
+        query = f&#39;SELECT * FROM {schema}.{table_name}&#39;
+        df = pd.read_sql_query(query, con=engine)
+
+        logging(&#39;extract_postgresql_function&#39;, engine,
+                f&#39;Извлечение данных из витрины {schema}.{table_name} PostgreSQL выполнено успешно.&#39;)
+        print(f&#39;Извлечение данных из витрины {schema}.{table_name} PostgreSQL выполнено успешно. \n&#39;)
+        messages.append(f&#39;Извлечение данных из витрины {schema}.{table_name} PostgreSQL выполнено успешно. \n&#39;)
+
+        return df
+    except Exception as e:
+        logging(&#39;error_extract_postgresql_function&#39;, engine,
+                f&#39;Ошибка при извлечении данных из витрины {schema}.{table_name} PostgreSQL: {e}&#39;)
+        print(f&#39;Ошибка при извлечении данных из витрины {schema}.{table_name} PostgreSQL: {e} \n&#39;)
+        messages.append(f&#39;Ошибка при извлечении данных из витрины {schema}.{table_name} PostgreSQL: {e} \n&#39;)
+        return None
+
+
+def upload_to_csv(engine: Engine, df: pd.DataFrame, table_name: str, file_to_open: str) -&gt; None:
+    &#34;&#34;&#34;
+    Загрузка данных в CSV файл.
+
+    :param engine: Объект SQLAlchemy Engine.
+    :param df: DataFrame, содержащий данные для сохранения в CSV.
+    :param table_name: Имя таблицы или витрины.
+    :param file_to_open: Путь и имя файла CSV, в который будут сохранены данные.
+    :return: None
+    &#34;&#34;&#34;
+    try:
+        df.to_csv(file_to_open, sep=&#39;;&#39;, encoding=&#39;utf-8&#39;, index=False)
+        logging(&#39;upload_to_csv_function&#39;, engine, f&#39;Данные загружены в файл {table_name}.csv.&#39;)
+        print(f&#39;Данные загружены в файл {table_name}.csv.\n&#39;)
+        messages.append(f&#39;Данные загружены в файл {table_name}.csv.\n&#39;)
+    except Exception as e:
+        logging(&#39;error_upload_to_csv_function&#39;, engine, f&#39;Ошибка при загрузке данных в файл {table_name}.csv: {e}&#39;)
+        print(f&#39;Ошибка при загрузке данных в файл {table_name}.csv: {e}\n&#39;)
+        messages.append(f&#39;Ошибка при загрузке данных в файл {table_name}.csv: {e}\n&#39;)
+
+
+def upload_to_postgresql(engine: Engine, schema: str, table_name: str, copy_table_name: str, file_to_open: str) -&gt; None:
+    &#34;&#34;&#34;
+    Выгрузка данных из CSV в PostgreSQL.
+
+    :param engine: Объект SQLAlchemy Engine.
+    :param schema: Схема PostgreSQL.
+    :param table_name: Имя таблицы PostgreSQL, из которой происходит выгрузка.
+    :param copy_table_name: Имя таблицы PostgreSQL, в которую происходит выгрузка.
+    :param file_to_open: Путь к файлу CSV для загрузки данных.
+    :return: None
+    &#34;&#34;&#34;
+    try:
+        df = pd.read_csv(file_to_open, sep=&#39;;&#39;, encoding=&#39;utf-8&#39;)
+        with engine.connect() as connect:  # type: Connection
+            connect.execute(text(f&#34;&#34;&#34;DROP TABLE IF EXISTS {schema}.{copy_table_name};&#34;&#34;&#34;))
+            connect.execute(text(f&#34;&#34;&#34;CREATE TABLE IF NOT EXISTS {schema}.{copy_table_name} AS TABLE {schema}.{table_name} WITH NO DATA;&#34;&#34;&#34;))
+
+        df.to_sql(copy_table_name, engine, if_exists=&#39;append&#39;, schema=schema, index=False)
+        logging(&#39;upload_postgresql_function&#39;, engine, f&#39;Данные в таблицу {schema}{copy_table_name} успешно записаны.&#39;)
+        print(f&#39;Данные в таблицу {schema}{copy_table_name} успешно записаны.\n&#39;)
+        messages.append(f&#39;Данные в таблицу {schema}{copy_table_name} успешно записаны.\n&#39;)
+    except Exception as e:
+        logging(&#39;error_upload_postgresql_function&#39;, engine, f&#39;Ошибка выгрузки данных из файла .csv: {e}&#39;)
+        print(f&#34;Ошибка выгрузки данных из файла .csv: {e}\n&#34;)
+        messages.append(f&#34;Ошибка выгрузки данных из файла .csv: {e}\n&#34;)
+
+
+@app.route(&#39;/run_script&#39;, methods=[&#39;POST&#39;])
+def run_script() -&gt; None:
+    &#34;&#34;&#34;
+    Запуск скрипта.
+    :return: None
+    &#34;&#34;&#34;
+    start_time = time.time()
+    # Название таблицы и схем в БД
+    schema = &#39;dm&#39;
+    table_name = &#39;dm_f101_round_f&#39;
+    copy_table_name = &#39;dm_f101_round_f_new&#39;
+    # Путь к файлу
+    file_to_open = f&#34;{Path(sys.path[0], &#39;data&#39;, table_name)}.csv&#34;
+    keyboard_input = int(request.form[&#39;mode&#39;])
+
+    engine: Optional[Engine] = connect_to_postgresql()
+
+    if engine:
+        create_table_logging(engine)
+        if exist_table(engine, schema, table_name):
+            if keyboard_input == 1:
+                df: Optional[pd.DataFrame] = extract_postgresql(engine, schema, table_name)
+                upload_to_csv(engine, df, table_name, file_to_open)
+                print(&#34;--- %s seconds ---&#34; % (time.time() - start_time))
+                messages.append(&#34;--- %s seconds ---&#34; % (time.time() - start_time))
+            elif keyboard_input == 2:
+                upload_to_postgresql(engine, schema, table_name, copy_table_name, file_to_open)
+                print(&#34;--- %s seconds ---&#34; % (time.time() - start_time))
+                messages.append(&#34;--- %s seconds ---&#34; % (time.time() - start_time))
+    return render_template(&#39;index.html&#39;, messages=messages)
+
+
+if __name__ == &#39;__main__&#39;:
+    app.run(debug=True)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="web_main.connect_to_postgresql"><code class="name flex">
+<span>def <span class="ident">connect_to_postgresql</span></span>(<span>) ‑> sqlalchemy.engine.base.Engine</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Проверка подключения к PostgreSQL.</p>
+<p>:return: SQLAlchemy Engine объект для подключения к PostgreSQL.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def connect_to_postgresql() -&gt; Engine:
+    &#34;&#34;&#34;
+    Проверка подключения к PostgreSQL.
+
+    :return: SQLAlchemy Engine объект для подключения к PostgreSQL.
+    &#34;&#34;&#34;
+    try:
+        # Для использования переменных окружения
+        load_dotenv(find_dotenv())
+
+        # Переменные окружения
+        DB_NAME = getenv(&#34;DB_NAME&#34;)
+        DB_HOST = getenv(&#34;DB_HOST&#34;)
+        DB_PORT = getenv(&#34;DB_PORT&#34;)
+        DB_USER = getenv(&#34;DB_USER&#34;)
+        DB_PASSWORD = getenv(&#34;DB_PASSWORD&#34;)
+
+        # Создание подключения к PostgreSQL
+        engine = create_engine(f&#39;postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}&#39;)
+
+        # Подключение к PostgreSQL
+        engine.connect()
+
+        print(&#39;\n Подключение к PostgreSQL успешно \n&#39;)
+        messages.append(&#39;\n Подключение к PostgreSQL успешно \n&#39;)
+        return engine
+
+    except Exception as e:
+        print(f&#39;\n Ошибка подключения к PostgreSQL: \n {e} \n&#39;)
+        messages.append(f&#39;\n Ошибка подключения к PostgreSQL: \n {e} \n&#39;)</code></pre>
+</details>
+</dd>
+<dt id="web_main.create_table_logging"><code class="name flex">
+<span>def <span class="ident">create_table_logging</span></span>(<span>engine: sqlalchemy.engine.base.Engine) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Создание таблиц логов.</p>
+<p>:param engine: SQLAlchemy Engine объект
+:return: None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_table_logging(engine: Engine) -&gt; None:
+    &#34;&#34;&#34;
+    Создание таблиц логов.
+
+    :param engine: SQLAlchemy Engine объект
+    :return: None
+    &#34;&#34;&#34;
+    with engine.connect() as connect:
+        with connect.begin():
+            connect.execute(text(&#34;&#34;&#34;
+                CREATE TABLE IF NOT EXISTS logs.extract_load_logs (
+                    action_date TIMESTAMP NOT NULL DEFAULT NOW(),
+                    status VARCHAR(40),
+                    description TEXT,
+                    error TEXT
+                );
+            &#34;&#34;&#34;))</code></pre>
+</details>
+</dd>
+<dt id="web_main.exist_table"><code class="name flex">
+<span>def <span class="ident">exist_table</span></span>(<span>engine: sqlalchemy.engine.base.Engine, schema: str, table_name: str) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Проверка существования витрины в PostgreSQL и данных в ней.</p>
+<p>:param engine: Объект SQLAlchemy Engine.
+:param schema: Схема витрины.
+:param table_name: Имя витрины.
+:return: True, если витрина существует и содержит данные, иначе False.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def exist_table(engine: Engine, schema: str, table_name: str) -&gt; bool:
+    &#34;&#34;&#34;
+    Проверка существования витрины в PostgreSQL и данных в ней.
+
+    :param engine: Объект SQLAlchemy Engine.
+    :param schema: Схема витрины.
+    :param table_name: Имя витрины.
+    :return: True, если витрина существует и содержит данные, иначе False.
+    &#34;&#34;&#34;
+    with engine.connect() as connect:  # type: Connection
+        exist_table = connect.execute(text(f&#34;&#34;&#34;select exists(
+                                        select * 
+                                        from information_schema.tables
+                                        where table_schema = &#39;{schema}&#39; 
+                                        and table_name = &#39;{table_name}&#39;)&#34;&#34;&#34;)).first()[0]
+
+        if exist_table:
+            data_query = text(f&#34;&#34;&#34;SELECT * FROM {schema}.{table_name};&#34;&#34;&#34;)
+            data = connect.execute(data_query).scalar()
+
+            if data is not None:
+                return True
+            else:
+                logging(&#39;error_exist_table_function&#39;, engine, f&#39;Ошибка, в витрине {schema}.{table_name} отсутствуют данные&#39;, &#39;&#39;)
+                print(f&#39;Ошибка, в витрине {schema}.{table_name} отсутствуют данные.\n&#39;)
+                messages.append(f&#39;Ошибка, в витрине {schema}.{table_name} отсутствуют данные.\n&#39;)
+        else:
+            logging(&#39;error_exist_table_function&#39;, engine, f&#39;Ошибка, витрины {schema}.{table_name} не существует.&#39;)
+            print(f&#39;Ошибка, витрины {schema}.{table_name} не существует.&#39;)
+            messages.append(f&#39;Ошибка, витрины {schema}.{table_name} не существует.&#39;)
+
+        return False</code></pre>
+</details>
+</dd>
+<dt id="web_main.extract_postgresql"><code class="name flex">
+<span>def <span class="ident">extract_postgresql</span></span>(<span>engine: sqlalchemy.engine.base.Engine, schema: str, table_name: str) ‑> Optional[pandas.core.frame.DataFrame]</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Извлечение данных из PostgreSQL.</p>
+<p>:param engine: Объект SQLAlchemy Engine.
+:param schema: Схема витрины.
+:param table_name: Имя витрины.
+:return: DataFrame с извлеченными данными или None, если произошла ошибка.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def extract_postgresql(engine: Engine, schema: str, table_name: str) -&gt; Optional[pd.DataFrame]:
+    &#34;&#34;&#34;
+    Извлечение данных из PostgreSQL.
+
+    :param engine: Объект SQLAlchemy Engine.
+    :param schema: Схема витрины.
+    :param table_name: Имя витрины.
+    :return: DataFrame с извлеченными данными или None, если произошла ошибка.
+    &#34;&#34;&#34;
+    try:
+        query = f&#39;SELECT * FROM {schema}.{table_name}&#39;
+        df = pd.read_sql_query(query, con=engine)
+
+        logging(&#39;extract_postgresql_function&#39;, engine,
+                f&#39;Извлечение данных из витрины {schema}.{table_name} PostgreSQL выполнено успешно.&#39;)
+        print(f&#39;Извлечение данных из витрины {schema}.{table_name} PostgreSQL выполнено успешно. \n&#39;)
+        messages.append(f&#39;Извлечение данных из витрины {schema}.{table_name} PostgreSQL выполнено успешно. \n&#39;)
+
+        return df
+    except Exception as e:
+        logging(&#39;error_extract_postgresql_function&#39;, engine,
+                f&#39;Ошибка при извлечении данных из витрины {schema}.{table_name} PostgreSQL: {e}&#39;)
+        print(f&#39;Ошибка при извлечении данных из витрины {schema}.{table_name} PostgreSQL: {e} \n&#39;)
+        messages.append(f&#39;Ошибка при извлечении данных из витрины {schema}.{table_name} PostgreSQL: {e} \n&#39;)
+        return None</code></pre>
+</details>
+</dd>
+<dt id="web_main.index"><code class="name flex">
+<span>def <span class="ident">index</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@app.route(&#39;/&#39;)
+def index():
+    return render_template(&#39;index.html&#39;)</code></pre>
+</details>
+</dd>
+<dt id="web_main.logging"><code class="name flex">
+<span>def <span class="ident">logging</span></span>(<span>status: str, engine: sqlalchemy.engine.base.Engine, description: str = '', error: str = '') ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Загрузка данных в таблицу логов.</p>
+<p>:param status: Статус загрузки данных (строка).
+:param engine: Объект SQLAlchemy Engine.
+:param description: Описание (по умолчанию пустая строка).
+:param error: Ошибка (по умолчанию пустая строка).
+:return: None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def logging(status: str, engine: Engine, description: str = &#39;&#39;, error: str = &#39;&#39;) -&gt; None:
+    &#34;&#34;&#34;
+    Загрузка данных в таблицу логов.
+
+    :param status: Статус загрузки данных (строка).
+    :param engine: Объект SQLAlchemy Engine.
+    :param description: Описание (по умолчанию пустая строка).
+    :param error: Ошибка (по умолчанию пустая строка).
+    :return: None
+    &#34;&#34;&#34;
+    with engine.connect() as connect:  # type: Connection
+        query = text(&#34;&#34;&#34;
+            INSERT INTO logs.extract_load_logs (status, description, error)
+            VALUES (:status, :description, :error)
+        &#34;&#34;&#34;)
+
+        connect.execute(query, status=status, description=description, error=error)</code></pre>
+</details>
+</dd>
+<dt id="web_main.run_script"><code class="name flex">
+<span>def <span class="ident">run_script</span></span>(<span>) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Запуск скрипта.
+:return: None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@app.route(&#39;/run_script&#39;, methods=[&#39;POST&#39;])
+def run_script() -&gt; None:
+    &#34;&#34;&#34;
+    Запуск скрипта.
+    :return: None
+    &#34;&#34;&#34;
+    start_time = time.time()
+    # Название таблицы и схем в БД
+    schema = &#39;dm&#39;
+    table_name = &#39;dm_f101_round_f&#39;
+    copy_table_name = &#39;dm_f101_round_f_new&#39;
+    # Путь к файлу
+    file_to_open = f&#34;{Path(sys.path[0], &#39;data&#39;, table_name)}.csv&#34;
+    keyboard_input = int(request.form[&#39;mode&#39;])
+
+    engine: Optional[Engine] = connect_to_postgresql()
+
+    if engine:
+        create_table_logging(engine)
+        if exist_table(engine, schema, table_name):
+            if keyboard_input == 1:
+                df: Optional[pd.DataFrame] = extract_postgresql(engine, schema, table_name)
+                upload_to_csv(engine, df, table_name, file_to_open)
+                print(&#34;--- %s seconds ---&#34; % (time.time() - start_time))
+                messages.append(&#34;--- %s seconds ---&#34; % (time.time() - start_time))
+            elif keyboard_input == 2:
+                upload_to_postgresql(engine, schema, table_name, copy_table_name, file_to_open)
+                print(&#34;--- %s seconds ---&#34; % (time.time() - start_time))
+                messages.append(&#34;--- %s seconds ---&#34; % (time.time() - start_time))
+    return render_template(&#39;index.html&#39;, messages=messages)</code></pre>
+</details>
+</dd>
+<dt id="web_main.upload_to_csv"><code class="name flex">
+<span>def <span class="ident">upload_to_csv</span></span>(<span>engine: sqlalchemy.engine.base.Engine, df: pandas.core.frame.DataFrame, table_name: str, file_to_open: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Загрузка данных в CSV файл.</p>
+<p>:param engine: Объект SQLAlchemy Engine.
+:param df: DataFrame, содержащий данные для сохранения в CSV.
+:param table_name: Имя таблицы или витрины.
+:param file_to_open: Путь и имя файла CSV, в который будут сохранены данные.
+:return: None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def upload_to_csv(engine: Engine, df: pd.DataFrame, table_name: str, file_to_open: str) -&gt; None:
+    &#34;&#34;&#34;
+    Загрузка данных в CSV файл.
+
+    :param engine: Объект SQLAlchemy Engine.
+    :param df: DataFrame, содержащий данные для сохранения в CSV.
+    :param table_name: Имя таблицы или витрины.
+    :param file_to_open: Путь и имя файла CSV, в который будут сохранены данные.
+    :return: None
+    &#34;&#34;&#34;
+    try:
+        df.to_csv(file_to_open, sep=&#39;;&#39;, encoding=&#39;utf-8&#39;, index=False)
+        logging(&#39;upload_to_csv_function&#39;, engine, f&#39;Данные загружены в файл {table_name}.csv.&#39;)
+        print(f&#39;Данные загружены в файл {table_name}.csv.\n&#39;)
+        messages.append(f&#39;Данные загружены в файл {table_name}.csv.\n&#39;)
+    except Exception as e:
+        logging(&#39;error_upload_to_csv_function&#39;, engine, f&#39;Ошибка при загрузке данных в файл {table_name}.csv: {e}&#39;)
+        print(f&#39;Ошибка при загрузке данных в файл {table_name}.csv: {e}\n&#39;)
+        messages.append(f&#39;Ошибка при загрузке данных в файл {table_name}.csv: {e}\n&#39;)</code></pre>
+</details>
+</dd>
+<dt id="web_main.upload_to_postgresql"><code class="name flex">
+<span>def <span class="ident">upload_to_postgresql</span></span>(<span>engine: sqlalchemy.engine.base.Engine, schema: str, table_name: str, copy_table_name: str, file_to_open: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Выгрузка данных из CSV в PostgreSQL.</p>
+<p>:param engine: Объект SQLAlchemy Engine.
+:param schema: Схема PostgreSQL.
+:param table_name: Имя таблицы PostgreSQL, из которой происходит выгрузка.
+:param copy_table_name: Имя таблицы PostgreSQL, в которую происходит выгрузка.
+:param file_to_open: Путь к файлу CSV для загрузки данных.
+:return: None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def upload_to_postgresql(engine: Engine, schema: str, table_name: str, copy_table_name: str, file_to_open: str) -&gt; None:
+    &#34;&#34;&#34;
+    Выгрузка данных из CSV в PostgreSQL.
+
+    :param engine: Объект SQLAlchemy Engine.
+    :param schema: Схема PostgreSQL.
+    :param table_name: Имя таблицы PostgreSQL, из которой происходит выгрузка.
+    :param copy_table_name: Имя таблицы PostgreSQL, в которую происходит выгрузка.
+    :param file_to_open: Путь к файлу CSV для загрузки данных.
+    :return: None
+    &#34;&#34;&#34;
+    try:
+        df = pd.read_csv(file_to_open, sep=&#39;;&#39;, encoding=&#39;utf-8&#39;)
+        with engine.connect() as connect:  # type: Connection
+            connect.execute(text(f&#34;&#34;&#34;DROP TABLE IF EXISTS {schema}.{copy_table_name};&#34;&#34;&#34;))
+            connect.execute(text(f&#34;&#34;&#34;CREATE TABLE IF NOT EXISTS {schema}.{copy_table_name} AS TABLE {schema}.{table_name} WITH NO DATA;&#34;&#34;&#34;))
+
+        df.to_sql(copy_table_name, engine, if_exists=&#39;append&#39;, schema=schema, index=False)
+        logging(&#39;upload_postgresql_function&#39;, engine, f&#39;Данные в таблицу {schema}{copy_table_name} успешно записаны.&#39;)
+        print(f&#39;Данные в таблицу {schema}{copy_table_name} успешно записаны.\n&#39;)
+        messages.append(f&#39;Данные в таблицу {schema}{copy_table_name} успешно записаны.\n&#39;)
+    except Exception as e:
+        logging(&#39;error_upload_postgresql_function&#39;, engine, f&#39;Ошибка выгрузки данных из файла .csv: {e}&#39;)
+        print(f&#34;Ошибка выгрузки данных из файла .csv: {e}\n&#34;)
+        messages.append(f&#34;Ошибка выгрузки данных из файла .csv: {e}\n&#34;)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="web_main.connect_to_postgresql" href="#web_main.connect_to_postgresql">connect_to_postgresql</a></code></li>
+<li><code><a title="web_main.create_table_logging" href="#web_main.create_table_logging">create_table_logging</a></code></li>
+<li><code><a title="web_main.exist_table" href="#web_main.exist_table">exist_table</a></code></li>
+<li><code><a title="web_main.extract_postgresql" href="#web_main.extract_postgresql">extract_postgresql</a></code></li>
+<li><code><a title="web_main.index" href="#web_main.index">index</a></code></li>
+<li><code><a title="web_main.logging" href="#web_main.logging">logging</a></code></li>
+<li><code><a title="web_main.run_script" href="#web_main.run_script">run_script</a></code></li>
+<li><code><a title="web_main.upload_to_csv" href="#web_main.upload_to_csv">upload_to_csv</a></code></li>
+<li><code><a title="web_main.upload_to_postgresql" href="#web_main.upload_to_postgresql">upload_to_postgresql</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
